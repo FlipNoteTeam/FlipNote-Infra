@@ -2,7 +2,7 @@ vault:
   server: "https://121.140.113.180:8200"
   path: "secret"
   version: "v2"
+  # Vault 자체 서명 인증서 (base64 인코딩)
+  caBundle: ""
 
-# Vault 토큰 (실제 배포 시 ArgoCD에서 values override 사용)
-# 주의: 이 값은 Git에 커밋하지 마세요!
 vaultToken: ""
