@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/FlipNoteTeam/FlipNote-Infra.git
     targetRevision: main
-    path: charts/user-service
+    path: charts/apps/user-service
     helm:
       valueFiles:
         - values.yaml

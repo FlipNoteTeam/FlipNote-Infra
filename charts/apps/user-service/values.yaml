@@ -1,0 +1,45 @@
+replicaCount: 1
+
+image:
+  repository: dungbik/flipnote-user
+  pullPolicy: IfNotPresent
+  tag: ""
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8081
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+env: []
+
+configMap:
+  enabled: false
+  data: {}
+
+secret:
+  enabled: false
+  data: {}
+
+externalSecret:
+  enabled: true
+  refreshInterval: "1h"
+  secretStoreName: "vault-backend"
+  secretStoreKind: "ClusterSecretStore"
+  remoteKey: "secret/data/flipnote/user-service"
+  data:
+    - secretKey: DB_URL
+      remoteProperty: DB_URL
+    - secretKey: DB_USERNAME
+      remoteProperty: DB_USERNAME
+    - secretKey: DB_PASSWORD
+      remoteProperty: DB_PASSWORD
