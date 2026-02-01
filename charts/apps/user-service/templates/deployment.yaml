@@ -40,3 +40,8 @@ spec:
           env:
             {{- toYaml .Values.env | nindent 12 }}
           {{- end }}
+          {{- if .Values.externalSecret.enabled }}
+          envFrom:
+            - secretRef:
+                name: {{ include "user-service.fullname" . }}-secret
+          {{- end }}
