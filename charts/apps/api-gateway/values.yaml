@@ -17,7 +17,7 @@ ingress:
   className: nginx
   annotations: {}
   hosts:
-    - host: api.flipnote.site
+    - host: api3.flipnote.site
       paths:
         - path: /
           pathType: Prefix
