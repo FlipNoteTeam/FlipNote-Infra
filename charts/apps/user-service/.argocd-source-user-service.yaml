@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.repository
+    value: dungbik/flipnote-user
+    forcestring: true
+  - name: image.tag
+    value: main@sha256:00d5e1b5cc706eeb57c8a8cd8cd1311dd6e3e2a7bddb81e9263f92b818a4d466
+    forcestring: true
