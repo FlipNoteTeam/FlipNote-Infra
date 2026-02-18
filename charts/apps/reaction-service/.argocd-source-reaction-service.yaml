@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.repository
+    value: dungbik/flipnote-reaction
+    forcestring: true
+  - name: image.tag
+    value: main@sha256:e75cb10ec01b7928453e7ea212c9f6d1985061910c32c1afe7a947b77081053a
+    forcestring: true
