@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: dungbik/flipnote-user
+  repository: dungbik/flipnote-reaction
   pullPolicy: IfNotPresent
   tag: ""
 
@@ -10,7 +10,7 @@ fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 8081
+  port: 8083
 
 resources:
   limits:
@@ -35,7 +35,7 @@ externalSecret:
   refreshInterval: "1h"
   secretStoreName: "vault-backend"
   secretStoreKind: "ClusterSecretStore"
-  remoteKey: "secret/data/flipnote/user-service"
+  remoteKey: "secret/data/flipnote/reaction-service"
   data:
     - secretKey: DB_URL
       remoteProperty: DB_URL
@@ -43,13 +43,11 @@ externalSecret:
       remoteProperty: DB_USERNAME
     - secretKey: DB_PASSWORD
       remoteProperty: DB_PASSWORD
-    - secretKey: REDIS_HOST
-      remoteProperty: REDIS_HOST
-    - secretKey: REDIS_PORT
-      remoteProperty: REDIS_PORT
-    - secretKey: GOOGLE_CLIENT_ID
-      remoteProperty: GOOGLE_CLIENT_ID
-    - secretKey: GOOGLE_CLIENT_SECRET
-      remoteProperty: GOOGLE_CLIENT_SECRET
-    - secretKey: APP_CLIENT_URL
-      remoteProperty: APP_CLIENT_URL
+    - secretKey: RABBITMQ_HOST
+      remoteProperty: RABBITMQ_HOST
+    - secretKey: RABBITMQ_PORT
+      remoteProperty: RABBITMQ_PORT
+    - secretKey: RABBITMQ_USERNAME
+      remoteProperty: RABBITMQ_USERNAME
+    - secretKey: RABBITMQ_PASSWORD
+      remoteProperty: RABBITMQ_PASSWORD
