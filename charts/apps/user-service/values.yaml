@@ -45,6 +45,8 @@ externalSecret:
       remoteProperty: DB_PASSWORD
     - secretKey: REDIS_HOST
       remoteProperty: REDIS_HOST
+    - secretKey: REDIS_PASSWORD
+      remoteProperty: REDIS_PASSWORD
     - secretKey: REDIS_PORT
       remoteProperty: REDIS_PORT
     - secretKey: GOOGLE_CLIENT_ID
