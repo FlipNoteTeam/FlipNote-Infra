@@ -57,3 +57,5 @@ externalSecret:
       remoteProperty: APP_CLIENT_URL
     - secretKey: JWT_SECRET
       remoteProperty: JWT_SECRET
+    - secretKey: APP_RESEND_API_KEY
+      remoteProperty: APP_RESEND_API_KEY
