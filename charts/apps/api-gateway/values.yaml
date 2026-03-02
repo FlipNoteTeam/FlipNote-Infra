@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: dungbik/flipnote-api-gateway
+  repository: ghcr.io/dungbik/flipnote-api-gateway
   pullPolicy: IfNotPresent
   tag: ""
 

@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "user-service.fullname" . }}
+  name: {{ include "reaction-service.fullname" . }}
   labels:
-    {{- include "user-service.labels" . | nindent 4 }}
+    {{- include "reaction-service.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "user-service.selectorLabels" . | nindent 6 }}
+      {{- include "reaction-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "user-service.selectorLabels" . | nindent 8 }}
+        {{- include "reaction-service.selectorLabels" . | nindent 8 }}
     spec:
       imagePullSecrets:
         - name: dockerhub-secret
@@ -45,5 +45,5 @@ spec:
           {{- if .Values.externalSecret.enabled }}
           envFrom:
             - secretRef:
-                name: {{ include "user-service.fullname" . }}-secret
+                name: {{ include "reaction-service.fullname" . }}-secret
           {{- end }}
