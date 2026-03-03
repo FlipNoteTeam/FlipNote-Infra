@@ -37,8 +37,8 @@ externalSecret:
   secretStoreKind: "ClusterSecretStore"
   remoteKey: "secret/data/flipnote/group-service"
   data:
-    - secretKey: DB_URL
-      remoteProperty: DB_URL
+    - secretKey: SPRING_DATASOURCE_URL
+      remoteProperty: SPRING_DATASOURCE_URL
     - secretKey: SPRING_DATASOURCE_USERNAME
       remoteProperty: SPRING_DATASOURCE_USERNAME
     - secretKey: SPRING_DATASOURCE_PASSWORD
