@@ -43,3 +43,7 @@ externalSecret:
       remoteProperty: SPRING_DATASOURCE_USERNAME
     - secretKey: SPRING_DATASOURCE_PASSWORD
       remoteProperty: SPRING_DATASOURCE_PASSWORD
+    - secretKey: GRPC_IMAGE_URL
+      remoteProperty: GRPC_IMAGE_URL
+    - secretKey: GRPC_USER_URL
+      remoteProperty: GRPC_USER_URL
