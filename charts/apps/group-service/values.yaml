@@ -39,7 +39,7 @@ externalSecret:
   data:
     - secretKey: DB_URL
       remoteProperty: DB_URL
-    - secretKey: DB_USERNAME
-      remoteProperty: DB_USERNAME
-    - secretKey: DB_PASSWORD
-      remoteProperty: DB_PASSWORD
+    - secretKey: SPRING_DATASOURCE_USERNAME
+      remoteProperty: SPRING_DATASOURCE_USERNAME
+    - secretKey: SPRING_DATASOURCE_PASSWORD
+      remoteProperty: SPRING_DATASOURCE_PASSWORD
