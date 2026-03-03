@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: dungbik/flipnote-group
+  repository: ghcr.io/dungbik/flipnote-group
   pullPolicy: IfNotPresent
   tag: ""
 
