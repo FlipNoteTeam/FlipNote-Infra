@@ -1,5 +1,5 @@
 vault:
-  server: "https://112.171.107.65:8200"
+  server: "https://vault.flipnote.site:8200"
   path: "secret"
   version: "v2"
   # Vault 자체 서명 인증서 (base64 인코딩)
