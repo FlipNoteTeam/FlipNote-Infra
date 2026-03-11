@@ -4,5 +4,5 @@ helm:
     value: dungbik/flipnote-image
     forcestring: true
   - name: image.tag
-    value: main@sha256:fb30371a4c07fb04c4655d74ad0a14e500ed9dbce7e157a9c5004efc364ae941
+    value: main@sha256:252a1657cd1a31cdd8329e4f6292f4e5210d366303bd8a6fbeb25cfe09464631
     forcestring: true
