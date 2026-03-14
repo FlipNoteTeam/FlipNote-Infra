@@ -1,0 +1,89 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/dungbik/flipnote-cardset
+  pullPolicy: IfNotPresent
+  tag: ""
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8084
+
+livenessProbe:
+  httpGet:
+    path: /actuator/health/liveness
+    port: 8084
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  failureThreshold: 3
+
+readinessProbe:
+  httpGet:
+    path: /actuator/health/readiness
+    port: 8084
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  failureThreshold: 3
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 768Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+
+env: []
+
+configMap:
+  enabled: false
+  data: {}
+
+secret:
+  enabled: false
+  data: {}
+
+externalSecret:
+  enabled: true
+  refreshInterval: "1h"
+  secretStoreName: "vault-backend"
+  secretStoreKind: "ClusterSecretStore"
+  remoteKey: "secret/data/flipnote/cardset-service"
+  data:
+    - secretKey: DB_DATABASE
+      remoteProperty: DB_DATABASE
+    - secretKey: DB_HOST
+      remoteProperty: DB_HOST
+    - secretKey: DB_PASSWORD
+      remoteProperty: DB_PASSWORD
+    - secretKey: DB_PORT
+      remoteProperty: DB_PORT
+    - secretKey: DB_SYNCHRONIZE
+      remoteProperty: DB_SYNCHRONIZE
+    - secretKey: DB_USERNAME
+      remoteProperty: DB_USERNAME
+    - secretKey: DEFAULT_CARDSET_IMAGE_URL
+      remoteProperty: DEFAULT_CARDSET_IMAGE_URL
+    - secretKey: GROUP_GRPC_URL
+      remoteProperty: GROUP_GRPC_URL
+    - secretKey: GRPC_PORT
+      remoteProperty: GRPC_PORT
+    - secretKey: IMAGE_GRPC_URL
+      remoteProperty: IMAGE_GRPC_URL
+    - secretKey: NODE_ENV
+      remoteProperty: NODE_ENV
+    - secretKey: PORT
+      remoteProperty: PORT
+    - secretKey: REDIS_HOST
+      remoteProperty: REDIS_HOST
+    - secretKey: REDIS_PASSWORD
+      remoteProperty: REDIS_PASSWORD
+    - secretKey: REDIS_PORT
+      remoteProperty: REDIS_PORT
+    - secretKey: SKIP_WS_AUTH
+      remoteProperty: SKIP_WS_AUTH
+    - secretKey: USER_GRPC_URL
+      remoteProperty: USER_GRPC_URL
