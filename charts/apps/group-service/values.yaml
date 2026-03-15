@@ -63,3 +63,5 @@ externalSecret:
       remoteProperty: GRPC_IMAGE_URL
     - secretKey: GRPC_USER_URL
       remoteProperty: GRPC_USER_URL
+    - secretKey: RESEND_API_KEY
+      remoteProperty: RESEND_API_KEY
