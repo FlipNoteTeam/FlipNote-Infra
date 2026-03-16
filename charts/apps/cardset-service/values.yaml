@@ -78,3 +78,5 @@ externalSecret:
       remoteProperty: SKIP_USER_GRPC
     - secretKey: SKIP_REACTION_GRPC
       remoteProperty: SKIP_REACTION_GRPC
+    - secretKey: GRPC_REACTION_URL
+      remoteProperty: GRPC_REACTION_URL
