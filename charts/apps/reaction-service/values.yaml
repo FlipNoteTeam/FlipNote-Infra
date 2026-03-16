@@ -11,6 +11,7 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 8083
+  grpcPort: 9093
 
 resources:
   limits:
