@@ -72,3 +72,5 @@ externalSecret:
       remoteProperty: SKIP_WS_AUTH
     - secretKey: USER_GRPC_URL
       remoteProperty: USER_GRPC_URL
+    - secretKey: RABBITMQ_URL
+      remoteProperty: RABBITMQ_URL
