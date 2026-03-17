@@ -66,3 +66,11 @@ externalSecret:
       remoteProperty: GRPC_USER_URL
     - secretKey: RESEND_API_KEY
       remoteProperty: RESEND_API_KEY
+    - secretKey: RABBITMQ_HOST
+      remoteProperty: RABBITMQ_HOST
+    - secretKey: RABBITMQ_PORT
+      remoteProperty: RABBITMQ_PORT
+    - secretKey: RABBITMQ_USERNAME
+      remoteProperty: RABBITMQ_USERNAME
+    - secretKey: RABBITMQ_PASSWORD
+      remoteProperty: RABBITMQ_PASSWORD
