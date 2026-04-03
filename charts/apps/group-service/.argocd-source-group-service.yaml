@@ -4,5 +4,5 @@ helm:
     value: ghcr.io/dungbik/flipnote-group
     forcestring: true
   - name: image.tag
-    value: main@sha256:598d66dd9fc29428d26a8a6d75a8df0c844ed5d9e4b5c91f525fec5eddaf698f
+    value: main@sha256:5f80f5c49dc23fbb58ebde3284be3147aa7b3afdd38fdd9c292b744951b7a20c
     forcestring: true
