@@ -4,5 +4,5 @@ helm:
     value: ghcr.io/dungbik/flipnote-cardset
     forcestring: true
   - name: image.tag
-    value: main@sha256:64656a7202152fc3fe5a1c938781546169f76452e4521770cee8a5ff1f64d246
+    value: main@sha256:5a645925ca145da3594138629c5f32cca8eca6aa3f422f9ef43207e58f98613c
     forcestring: true
